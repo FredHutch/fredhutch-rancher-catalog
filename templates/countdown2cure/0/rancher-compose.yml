@@ -1,7 +1,11 @@
 .catalog:
-  name: "Countdown to the Cure"
-  version: "v0.1"
-  description: "simple website that counts down to the cure deadline"
-  uuid: countdown2cure-0
-  minimum_rancher_version: v1.2
+  name: "countdown2cure"
+  version: "0.1"
+  description: "website that counts down to the cancer cure"
+  minimum_rancher_version: v0.46.0
   questions:
+    - variable: "port"
+      label: "Port"
+      description: "public port"
+      required: true
+      type: "int"

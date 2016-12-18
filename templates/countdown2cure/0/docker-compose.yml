@@ -1,8 +1,5 @@
-version: '2'
-
-services:
-
-  countdown2cure:
-    image: mcdermott/countdown2cure 
-    ports:
-      - 80
+countdown2cure:  
+  image: 'mcdermott/countdown2cure:latest'
+  restart: always
+  ports:
+    - ${port}:80
