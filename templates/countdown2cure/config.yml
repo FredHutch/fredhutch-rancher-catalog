@@ -1,0 +1,6 @@
+name: Countdown2Cure 
+description: |
+  simple website that counts down to the cure deadline 
+version: v0.1
+category: Applications
+maintainer: Robert McDermott <rmcdermo@fredhutch.org> 
