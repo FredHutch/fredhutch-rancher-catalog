@@ -1,0 +1,13 @@
+version: '2'
+services:
+  count2cure-lb:
+    image: rancher/lb-service-haproxy:v0.4.6
+    ports:
+    - ${port}:80/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+  countdown2cure:
+    image: mcdermott/countdown2cure:latest
+    ports:
+    - 80/tcp

@@ -1,0 +1,24 @@
+version: '2'
+services:
+  count2cure-lb:
+    scale: 1
+    start_on_create: true
+    lb_config:
+      certs: []
+      port_rules:
+      - path: ''
+        priority: 1
+        protocol: http
+        service: countdown2cure
+        source_port: 8888
+        target_port: 80
+    health_check:
+      response_timeout: 2000
+      healthy_threshold: 2
+      port: 42
+      unhealthy_threshold: 3
+      interval: 2000
+  countdown2cure:
+    scale: 1
+    start_on_create: true
+
